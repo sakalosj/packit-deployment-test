@@ -1,4 +1,4 @@
-FROM fedora:32
+FROM sakalosj/packit-deployment-test:test
 
 
 COPY install-deps-github.yaml /src/
