@@ -1,4 +1,4 @@
-FROM quay.io/packit/packit-deployment-test:latest
+FROM quay.io/packit/ansible_base:test
 
 
 COPY install-deps-github.yaml /src/

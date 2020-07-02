@@ -1,4 +1,4 @@
-FROM sakalosj/packit-deployment-test:test
+FROM docker.io/sakalosj/ansible_base:test 
 
 
 COPY install-deps-github.yaml /src/
