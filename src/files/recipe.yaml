@@ -5,5 +5,11 @@
     home_path: "{{ lookup('env', 'HOME') }}"
     packit_service_path: /src
   tasks:
-    - import_tasks: common.yaml
-    - import_tasks: httpd.yaml
+    - name: check source_branch
+      debug:
+        msg: SOURCE_BRANCH is set to {{ source_branch }}
+    - name: install ogr
+      pip:
+        name:
+          - git+https://github.com/packit-service/ogr.git@{{ source_branch }}
+        extra_args: --no-deps

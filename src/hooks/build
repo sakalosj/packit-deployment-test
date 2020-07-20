@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo "Starting custom build"
+pwd
+env
+
+docker build -t $IMAGE_NAME -f $DOCKERFILE_PATH --build-arg SOURCE_BRANCH=$SOURCE_BRANCH .
+
